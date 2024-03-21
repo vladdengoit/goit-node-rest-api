@@ -2,7 +2,9 @@ import fs from "fs/promises";
 import path from "path";
 import { nanoid } from 'nanoid'
 
-const contactsPath  = path.resolve("../goit-node-rest-api-1", "db","contacts.json")
+const contactsPath  = path.resolve("../db","contacts.json") //with this path does not work for me
+// const contactsPath  = path.resolve("../goit-node-rest-api-1", "db","contacts.json")  //with this path work for me
+// console.log("myPath :" , contactsPath);
 
 const updateAllContacts = contacts => fs.writeFile(contactsPath, JSON.stringify(contacts,null,2))
 
